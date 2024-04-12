@@ -1,0 +1,12 @@
+name: "devops-workflow"
+
+on:
+  push:
+    branches:
+      -develop
+
+jobs:
+  runs-on: "ubuntu-latest"
+  steps:
+    -name: App Build
+     run: echo "App Build Successfull"
