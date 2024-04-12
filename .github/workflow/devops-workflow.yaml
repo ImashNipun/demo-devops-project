@@ -2,11 +2,13 @@ name: "devops-workflow"
 
 on:
   push:
-    branches:
-      - develop
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
 
 jobs:
-  runs-on: "ubuntu-latest"
-  steps:
-    - name: App Build
-      run: echo "App Build Successfull"
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: App Build
+        run: echo "App Build Successfull"
