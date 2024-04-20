@@ -8,6 +8,7 @@ const addBookSchema = Joi.object({
   publisher: Joi.string().required(),
   language: Joi.string().required(),
   isbn: Joi.string().required(),
+  price: Joi.number().required(),
 });
 
 module.exports = {

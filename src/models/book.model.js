@@ -29,6 +29,10 @@ const bookSchema = new Schema({
   isbn:  {
     type: String,
     required: true
+  },
+  price:  {
+    type: Number,
+    required: true
   }
 });
 
