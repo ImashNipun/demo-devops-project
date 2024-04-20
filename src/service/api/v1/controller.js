@@ -1,5 +1,5 @@
 const express = require("express")
-const { createBook } = require("./service")
+const { createBook, getBooks, getBook } = require("./service")
 const { celebrate, Segments } = require("celebrate")
 const asyncHandler = require("express-async-handler")
 const { addBookSchema } = require("./schema")
@@ -20,6 +20,24 @@ router.post(
 );
 
 
+//Get products
+router.get(
+    "/",
+    asyncHandler(async(req,res) => {
+        const books = await getBooks()
+        return response({res, status: 200, message: "Books sucessfuly retrieved", data: books})
+    })
+);
+
+//Get product
+router.get(
+    "/:bookId",
+    asyncHandler(async(req,res) => {
+        const bookId = req.params.bookId
+        const book = await getBook(bookId)
+        return response({res, status: 200, message: "Books sucessfuly retrieved", data: book})
+    })
+)
 
 
 module.exports = router
