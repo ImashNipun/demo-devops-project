@@ -1,8 +1,8 @@
 const express = require("express")
-const books = require("./api")
+const BookRoute = require("./v1/controller")
 
 const router = express.Router()
 
-router.use(books)
+router.use("/v1/books", BookRoute)
 
 module.exports = router
