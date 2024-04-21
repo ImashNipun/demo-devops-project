@@ -3,9 +3,6 @@ const config = require("./config/index");
 const mongoose = require("mongoose");
 const { errorHandler } = require("./middleware");
 const bookAPI = require("./service");
-
-const { errorHandler } = require("./middleware");
-const bookAPI = require("./service");
 const apiHealth = require("express-health-middleware")
 
 
