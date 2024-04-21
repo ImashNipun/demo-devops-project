@@ -3,14 +3,14 @@ const config = require("./config/index");
 const mongoose = require("mongoose");
 const { errorHandler } = require("./middleware");
 const bookAPI = require("./service");
+const apiHealth = require("express-health-middleware")
 
 const app = express();
 app.use(express.json())
 
-mongoose.connect(config.MONGO_DB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+app.use(apiHealth());
+
+mongoose.connect(config.MONGO_DB_URI);
 
 mongoose.connection.on("connected", () => {
   console.log("MongoDB connected successfully!");
