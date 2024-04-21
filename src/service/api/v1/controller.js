@@ -17,7 +17,7 @@ router.post(
     return response({
       res,
       status: 200,
-      message: "Book Added Sucessfully",
+      message: "Book Added Sucessfully!",
       data: newBook,
     });
   })
@@ -31,7 +31,7 @@ router.get(
     return response({
       res,
       status: 200,
-      message: "Books sucessfuly retrieved",
+      message: "Books sucessfuly retrieved!",
       data: books,
     });
   })
@@ -46,7 +46,7 @@ router.get(
     return response({
       res,
       status: 200,
-      message: "Books sucessfuly retrieved",
+      message: "Books sucessfuly retrieved!",
       data: book,
     });
   })
