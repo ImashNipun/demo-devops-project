@@ -1,4 +1,6 @@
-const response = ({ res, status = 200, message, data }) => {
+const response = ({
+  res, status = 200, message, data,
+}) => {
   const payload = {
     data,
     message,
