@@ -1,5 +1,5 @@
-const express = require("express");
-const { BookModel } = require("../../../models");
+const express = require('express');
+const { BookModel } = require('../../../models');
 
 const createBook = (book) => {
   const new_book = BookModel.create(book);
@@ -24,12 +24,12 @@ const updateBook = (bookId, book) => {
 const deleteBook = (bookId) => {
   const deleted_book = BookModel.findByIdAndDelete(bookId);
   return deleted_book;
-}
+};
 
 module.exports = {
   createBook,
   getBooks,
   getBook,
   updateBook,
-  deleteBook
+  deleteBook,
 };

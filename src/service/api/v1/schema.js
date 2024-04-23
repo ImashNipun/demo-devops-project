@@ -1,4 +1,4 @@
-const { Joi } = require("celebrate");
+const { Joi } = require('celebrate');
 
 const addBookSchema = Joi.object({
   title: Joi.string().required(),
@@ -12,5 +12,5 @@ const addBookSchema = Joi.object({
 });
 
 module.exports = {
-    addBookSchema,
-}
+  addBookSchema,
+};
